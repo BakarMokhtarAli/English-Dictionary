@@ -13,13 +13,17 @@ async function fetchData(word){
         const result = await fetch(url).then(res => res.json())
         if(result.title){
             infoTextEl.style.display = 'none';
-            meaningContainer.style.display = "flex"
+            meaningContainer.style.display = "flex";
+            wordMeaning.style.display = 'inline-flex'
+            wordTitle.style.display = 'inline-flex'
             wordTitle.textContent = "Word Title: "+ word
             wordMeaning.textContent = "Word Meaning: N/A";
             audioEl.style.display = "none"
     }else{
         infoTextEl.style.display = 'none';
-        meaningContainer.style.display = "flex"
+        meaningContainer.style.display = "flex";
+        wordMeaning.style.display = 'inline-flex'
+        wordTitle.style.display = 'inline-flex'
         wordTitle.textContent = "Word-Title: "+ result[0].word;
         wordMeaning.textContent = "Meaning: "+ result[0].meanings[0].definitions[0].definition;
         audioEl.style.display = "inline-flex"
