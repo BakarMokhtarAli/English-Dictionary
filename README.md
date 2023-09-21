@@ -1,4 +1,4 @@
-# English-English
+# English-Dictionary
 This is a simple dictionary project built using HTML, CSS, and JavaScript. It allows users to look up the definitions of words and phrases.
 
 Features:
